@@ -15,6 +15,4 @@
 - [ ] Front-End React Native.
 
 ### Layout da aplicação:
-
-
-
+![Figma astro](https://user-images.githubusercontent.com/45456833/162249340-b3966112-d656-4edb-876e-26291c52e0c5.jpg)
