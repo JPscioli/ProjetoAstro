@@ -16,3 +16,5 @@
 
 ### Layout da aplicação:
 ![Figma astro](https://user-images.githubusercontent.com/45456833/162249340-b3966112-d656-4edb-876e-26291c52e0c5.jpg)
+### Arquitetura do Projeto
+![Layout Arquitetura](https://user-images.githubusercontent.com/45456833/162785123-0244eb92-3703-4c7e-831a-f754596e5bda.jpg)
