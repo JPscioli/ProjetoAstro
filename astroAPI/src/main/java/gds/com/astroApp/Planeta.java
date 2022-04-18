@@ -1,15 +1,8 @@
 package gds.com.astroApp;
 
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.springframework.boot.context.properties.ConstructorBinding;
-import org.springframework.data.annotation.Id;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 
 @Entity
@@ -19,14 +12,13 @@ public class Planeta {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private String nome;
-    private String descoberta;
-    private String historiaNome;
-    private double diametro;
-    private double orbita;
-    private double dias;
+    private String informacoes;
+    private String diametro;
+    private String orbita;
+    private String dias;
     private int luas;
-    //Getters & Setters
 
+    //Getters & Setters
     public Long getId() {
         return id;
     }
@@ -43,43 +35,35 @@ public class Planeta {
         this.nome = nome;
     }
 
-    public String getDescoberta() {
-        return descoberta;
+    public String getInformacoes() {
+        return informacoes;
     }
 
-    public void setDescoberta(String descoberta) {
-        this.descoberta = descoberta;
+    public void setInformacoes(String informacoes) {
+        this.informacoes = informacoes;
     }
 
-    public String getHistoriaNome() {
-        return historiaNome;
-    }
-
-    public void setHistoriaNome(String historiaNome) {
-        this.historiaNome = historiaNome;
-    }
-
-    public double getDiametro() {
+    public String getDiametro() {
         return diametro;
     }
 
-    public void setDiametro(double diametro) {
+    public void setDiametro(String diametro) {
         this.diametro = diametro;
     }
 
-    public double getOrbita() {
+    public String getOrbita() {
         return orbita;
     }
 
-    public void setOrbita(double orbita) {
+    public void setOrbita(String orbita) {
         this.orbita = orbita;
     }
 
-    public double getDias() {
+    public String getDias() {
         return dias;
     }
 
-    public void setDias(double dias) {
+    public void setDias(String dias) {
         this.dias = dias;
     }
 
@@ -90,36 +74,23 @@ public class Planeta {
     public void setLuas(int luas) {
         this.luas = luas;
     }
+    //Constructor
+    public Planeta() {
+    }
 
-    //Contructor
-    public Planeta(Long id,
-                   String nome,
-                   String descoberta,
-                   String historiaNome,
-                   double diametro,
-                   double orbita,
-                   double dias,
-                   int luas) {
+    public Planeta(Long id, String nome, String informacoes, String diametro, String orbita, String dias, int luas) {
         this.id = id;
         this.nome = nome;
-        this.descoberta = descoberta;
-        this.historiaNome = historiaNome;
+        this.informacoes = informacoes;
         this.diametro = diametro;
         this.orbita = orbita;
         this.dias = dias;
         this.luas = luas;
     }
 
-    public Planeta(String nome,
-                   String descoberta,
-                   String historiaNome,
-                   double diametro,
-                   double orbita,
-                   double dias,
-                   int luas) {
+    public Planeta(String nome, String informacoes, String diametro, String orbita, String dias, int luas) {
         this.nome = nome;
-        this.descoberta = descoberta;
-        this.historiaNome = historiaNome;
+        this.informacoes = informacoes;
         this.diametro = diametro;
         this.orbita = orbita;
         this.dias = dias;
